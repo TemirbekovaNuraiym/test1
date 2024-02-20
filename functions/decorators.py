@@ -72,19 +72,19 @@ from datetime import datetime
 
 '-----------------------------------------------------------'
 
-def decorator(num):
-    def inner_decorator(func):
-        def wrapper(*args, **kwargs):
-            for i in range(num):
-                func(*args, **kwargs)
-        return wrapper
-    return inner_decorator
+# def decorator(num):
+#     def inner_decorator(func):
+#         def wrapper(*args, **kwargs):
+#             for i in range(num):
+#                 func(*args, **kwargs)
+#         return wrapper
+#     return inner_decorator
 
-@decorator(10)
-def hello():
-    print('hello world')
+# @decorator(10)
+# def hello():
+#     print('hello world')
 
-hello()
+# hello()
 
 
 '------------------------tasks------------------------------'
@@ -104,6 +104,8 @@ hello()
 #     return "hello world"
 # first()
 
+'-----------------------------------------------------'
+
 #2
 # from datetime import datetime
 
@@ -118,6 +120,7 @@ hello()
 #     print('Hello world')
 # func()
 
+'--------------------------------------------------------'
 
 # def make_bold(func):
 #     def wrapper(*args, **kwargs):
@@ -148,3 +151,60 @@ hello()
 #     return 'Hello world'
  
 # print(hello())
+
+'-----------------------------------------------------------'
+
+# from datetime import datetime
+
+
+# def benchmark(func):
+#     def wrapper(*args, **kwargs):
+#         print('Время выполнения: ', datetime.now())
+#         func(*args, **kwargs)
+#     return wrapper
+
+# @benchmark 
+# def fetch_webpage(): 
+#   import requests 
+#   webpage = requests.get('https://google.com')  
+
+# print(benchmark(fetch_webpage))
+
+'---------------------------------------------------'
+
+# users = {'Nick':'123123', 'Sem':'098098'}
+
+# def validate_password(func): 
+#     def wrapper(username, password): 
+#         if username not in users:
+#           print("Username is not defined") 
+#         elif users[username] != password:
+#           print("Password is invalid")
+#         else:
+#           return func(username,password)
+#     return wrapper
+        
+# @validate_password 
+# def login(username, password):
+#     print(f'Welcome, {username}') 
+  
+# login('Nick','123123')
+
+        
+'-------------------------------------------------------------------'
+
+
+def is_admin(func): 
+    def wrapper(arg1):
+      if arg1['is_admin'] == True: 
+        print(f"Доступ разрешен {arg1['username']}") 
+      else: 
+        print(f"Доступ запрещен {arg1['username']}") 
+    return wrapper 
+    
+@is_admin 
+def get_user(dict): 
+    return dict 
+    
+get_user({'username': 'john133', 'is_admin': True}) 
+get_user({'username': 'jane133', 'is_admin': False})
