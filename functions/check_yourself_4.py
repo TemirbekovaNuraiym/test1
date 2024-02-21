@@ -34,11 +34,11 @@ print(func())
 
 
 #2
-# def type_func(a, s):
-#     return type(a)
-#     return type(s)
+def type_func(a, s):
+    return type(a)
+    return type(s)
 
-# print(type_func(12, 98))
-# print(type_func('fjkj', 'dkj'))
+print(type_func(12, 98))
+print(type_func('fjkj', 'dkj'))
 
 

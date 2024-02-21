@@ -34,3 +34,9 @@ git branch - список веток
 git branch [name] - создание ветки name
 git checkput - переключение между веткми 
 git merge name1 name2 - соеденяет ветки
+
+
+
+
+git help - окрывает документацию гит в терминале
+nano - меняет код в нашем файле

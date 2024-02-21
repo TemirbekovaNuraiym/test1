@@ -194,17 +194,17 @@ from datetime import datetime
 '-------------------------------------------------------------------'
 
 
-def is_admin(func): 
-    def wrapper(arg1):
-      if arg1['is_admin'] == True: 
-        print(f"Доступ разрешен {arg1['username']}") 
-      else: 
-        print(f"Доступ запрещен {arg1['username']}") 
-    return wrapper 
+# def is_admin(func): 
+#     def wrapper(arg1):
+#       if arg1['is_admin'] == True: 
+#         print(f"Доступ разрешен {arg1['username']}") 
+#       else: 
+#         print(f"Доступ запрещен {arg1['username']}") 
+#     return wrapper 
     
-@is_admin 
-def get_user(dict): 
-    return dict 
+# @is_admin 
+# def get_user(dict): 
+#     return dict 
     
-get_user({'username': 'john133', 'is_admin': True}) 
-get_user({'username': 'jane133', 'is_admin': False})
+# get_user({'username': 'john133', 'is_admin': True}) 
+# get_user({'username': 'jane133', 'is_admin': False})
