@@ -78,9 +78,9 @@
 
 # from functools import reduce
 
-# # list_ = [1, 23, 4, 1, 56, 10]
-# # res = (lambda x, y: x*y, list_)
-# # print(res)
+# list_ = [1, 23, 4, 1, 56, 10]
+# res = (lambda x, y: x*y, list_)
+# print(res)
 
 # from functools import reduce
 # users = [
@@ -103,6 +103,8 @@
 # list_ = [12, 3, 4, -23, 0, -1, 4]
 # res = reduce(lambda x, y: x if x < y else y, list_)
 # print(res)
+
+
 
 
 
@@ -174,7 +176,24 @@
 # print(result)
 
 
-list_ = [-1, 2, 3, 5, -3, 7] 
-result = list(filter(lambda x: False if x < 0 else True, list_))
+# list_ = [-1, 2, 3, 5, -3, 7] 
+# result = list(filter(lambda x: False if x < 0 else True, list_))
 
+# print(result)
+
+
+
+
+# list_ = [1, -2, 3, -4, 5, -6]
+# result = list(filter([lambda i: False if i < 0 else True for i in list_]))
+# print(result)
+
+
+# list_ = ['inheritance', 'solid', 'polymorphism', 'dry', 'yagni',] 
+# result = list(filter(lambda x: len(x) > 7, list_))
+# print(result)
+
+
+list_ = [-1, 2, 3, 5, -3, 7] 
+result = list(map(False if i < 0 else True for i in list_))
 print(result)
